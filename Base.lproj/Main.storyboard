@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0gM-Sx-u71">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WhatFlower" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PAi-Nw-kCk">
+                                <rect key="frame" x="0.0" y="92" width="414" height="414"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="PAi-Nw-kCk" secondAttribute="height" multiplier="1:1" id="cT2-eI-409"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="IXp-Bz-kbb">
+                                <rect key="frame" x="20" y="571" width="374" height="260"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="IXp-Bz-kbb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="3fm-a3-KZt"/>
+                            <constraint firstItem="IXp-Bz-kbb" firstAttribute="top" secondItem="PAi-Nw-kCk" secondAttribute="bottom" constant="65" id="7Xs-dT-RVE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IXp-Bz-kbb" secondAttribute="trailing" constant="20" id="NvG-QI-MtQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="IXp-Bz-kbb" secondAttribute="bottom" constant="31" id="VqY-ge-KXf"/>
+                            <constraint firstItem="PAi-Nw-kCk" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="fiS-Hq-8Ps"/>
+                            <constraint firstItem="PAi-Nw-kCk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="gAS-mQ-1CT"/>
+                            <constraint firstItem="PAi-Nw-kCk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hWp-Ou-orC"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="xjx-8I-ji2">
+                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="Y64-Gs-BbA">
+                            <connections>
+                                <action selector="cameraTapped:" destination="BYZ-38-t0r" id="NbT-NT-V8g"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="imageView" destination="PAi-Nw-kCk" id="u27-fX-lVJ"/>
+                        <outlet property="label" destination="IXp-Bz-kbb" id="8Af-2r-OxH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1021.7391304347827" y="-2.0089285714285712"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="egg-2x-6iN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0gM-Sx-u71" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xjz-f9-5N2">
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Du2-eI-87x"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Me-BS-ChF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="111.59420289855073" y="-2.0089285714285712"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
